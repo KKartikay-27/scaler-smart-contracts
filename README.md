@@ -1,18 +1,14 @@
 # Scaler School of Technology - Smart Contracts Course
 
-Welcome to the project repository for the Scaler School of Technology's **Smart Contracts Course**. This repository is designed as a template for your final project submission. Each group is expected to fork this repository, create a new branch, and make contributions to their fork before submitting their work via a pull request.
+### Project Overview
+This project is a *blockchain-based ticketing system* that allows users to mint, view, and manage event tickets as NFTs on the Ethereum blockchain. Each ticket is represented as an *ERC-721 NFT*, ensuring authenticity, uniqueness, and security.  
 
----
 
-## 📖 Project Overview
-
-This repository contains the final project submission for **Group 2**. The project is part of the Smart Contracts Course and is designed to apply the knowledge you have gained throughout the course.
-
-Each group has the freedom to:
-- **Choose any blockchain** platform (e.g., Ethereum, Solana, Polygon, etc.).
-- **Select any project topic** that aligns with the principles of blockchain and smart contracts.
-
----
+###  Technologies Used  
+1️⃣ *Frontend* – React.js + TailwindCSS for UI  
+2️⃣ *Blockchain* – Ethereum (via MetaMask)  
+3️⃣ *Smart Contract* – Solidity (ERC-721 standard)  
+4️⃣ *Web3 Library* – Ethers.js for interacting with the contract  
 
 ## 📋 Project Details
 
