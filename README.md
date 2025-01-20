@@ -35,7 +35,6 @@ This project is a *blockchain-based ticketing system* that allows users to mint,
 ├── contracts/              # Place smart contracts here
 ├── tests/                  # Place test files here
 ├── migrations/             # Migration scripts (optional)
-├── project/                # Placeholder for group project files
 ├── frontend/               # Place frontend code here
 └── package.json            # Node.js-based dependencies (if applicable)
 ```
