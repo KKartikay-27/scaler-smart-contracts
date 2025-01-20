@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { ethers } from "ethers";
-import TicketNFT from "../contracts/TicketNFT.json"; 
+import TicketNFT from "../contracts/TicketNFT.json";
 
 const ViewTickets = () => {
   const [tickets, setTickets] = useState([]);
@@ -25,7 +25,8 @@ const ViewTickets = () => {
     }
   };
 
-  const fetchAllTickets = async () => {
+  // Use useCallback to memoize fetchAllTickets
+  const fetchAllTickets = useCallback(async () => {
     try {
       if (!window.ethereum) {
         console.error("MetaMask is not installed.");
@@ -56,7 +57,13 @@ const ViewTickets = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [contractAddress]); // Add contractAddress to the dependencies array
+
+  useEffect(() => {
+    if (isConnected) {
+      fetchAllTickets(); // Fetch all tickets once wallet is connected
+    }
+  }, [isConnected, fetchAllTickets]); // Add fetchAllTickets to the dependency array
 
   const fetchMyTickets = async () => {
     try {
